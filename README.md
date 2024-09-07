@@ -132,10 +132,6 @@ Here are some suggestions for improving the project:
 - [Azure Provider Documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
 
 ---
-
-Feel free to reach out if you have any questions or need further assistance! 😊
-
-Source: Conversation with Copilot, 07/09/2024
 (1) Index - Terraform Recommended Practices - HashiCorp Developer. https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices.
 (2) Best practices for general style and structure | Terraform - Google Cloud. https://cloud.google.com/docs/terraform/best-practices/general-style-structure.
 (3) 20 Terraform Best Practices to Improve your TF workflow - Spacelift. https://spacelift.io/blog/terraform-best-practices.
