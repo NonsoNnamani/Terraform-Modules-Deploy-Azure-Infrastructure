@@ -74,8 +74,8 @@ This file defines the variables used in the container registry module.
 1. **Clone the repository:**
 
    ```sh
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/NonsoNnamani/Terraform-Modules-Deploy-Azure-Infrastructure.git
+   cd Terraform-Modules-Deploy-Azure-Infrastructure
    ```
 
 2. **Initialize Terraform:**
