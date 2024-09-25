@@ -10,7 +10,7 @@ variable "resource_group_name" {
 
 variable "location" {
   description = "location where storage account will be created"
-  default = "centralus"
+  default = "Central US"
 }
 
 variable "account_tier" {
