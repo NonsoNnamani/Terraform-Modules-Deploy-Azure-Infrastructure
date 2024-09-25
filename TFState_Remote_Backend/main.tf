@@ -14,14 +14,15 @@ resource "azurerm_storage_account" "tfstate" {
   location                 = azurerm_resource_group.rg.location
   account_tier             = var.account_tier
   account_replication_type = var.account_replication_type
-  blob_properties = {
+  
+  blob_properties {
     delete_retention_policy {
       days = 0
       permanent_delete_enabled = true
     }
-  }
-  container_delete_retention_policy = {
-    days = 0
+    container_delete_retention_policy {
+      days = 0
+    }
   }
 }
 
