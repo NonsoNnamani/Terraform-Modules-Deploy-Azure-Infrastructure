@@ -17,11 +17,11 @@ resource "azurerm_storage_account" "tfstate" {
   
   blob_properties {
     delete_retention_policy {
-      days = 0
+      days = 1
       permanent_delete_enabled = true
     }
     container_delete_retention_policy {
-      days = 0
+      days = 1
     }
   }
 }
