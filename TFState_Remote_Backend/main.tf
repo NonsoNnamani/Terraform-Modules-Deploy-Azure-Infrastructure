@@ -29,6 +29,7 @@ resource "azurerm_storage_account" "tfstate" {
 resource "random_string" "suffix" {
   length  = 6
   special = false
+  upper   = false 
 }
 
 resource "azurerm_storage_container" "tfstate" {
