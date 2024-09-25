@@ -37,11 +37,15 @@ module "container_registry" {
   admin_enabled           = var.admin_enabled
 }
 
+module "tfstate_remote_backend" {
+  source = "../TFState_Remote_Backend"
+}
+
 terraform {
   backend "azurerm" {
-    resource_group_name   = "RG1"
-    storage_account_name  = azurerm_storage_account.tfstate.name
-    container_name        = "tfstate"
+    resource_group_name   = module.tfstate_remote_backend.tfstate_remote_backend_rg_name
+    storage_account_name  = module.tfstate_remote_backend.tfstate_remote_backend_storage_account_name
+    container_name        = module.tfstate_remote_backend.tfstate_remote_backend_storage_container_name
     key                   = "terraform.tfstate"
   }
 }
