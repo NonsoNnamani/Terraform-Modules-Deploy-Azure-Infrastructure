@@ -26,3 +26,15 @@ resource "azurerm_storage_container" "tfstate" {
   storage_account_name  = azurerm_storage_account.tfstate.name
   container_access_type = var.container_access_type
 }
+
+output "tfstate_remote_backend_rg_name" {
+  value = azurerm_resource_group.rg.name
+}
+
+output "tfstate_remote_backend_storage_account_name" {
+  value = azurerm_storage_account.tfstate.name
+}
+
+output "tfstate_remote_backend_storage_container_name" {
+  value = azurerm_storage_container.tfstate.name
+}
