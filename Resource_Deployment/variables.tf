@@ -1,3 +1,8 @@
+variable "azure_subscription_id" {
+  description = "Your Azure subscription ID gotten by running the PowerShell script"
+  type = string
+}
+
 variable "resource_group_name" {
   description = "The name of the resource group"
   default     = "RG1"
