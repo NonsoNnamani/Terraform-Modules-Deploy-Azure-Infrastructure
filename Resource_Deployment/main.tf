@@ -8,7 +8,7 @@ terraform {
     # resource_group_name   = Copy and Paste value from Environment Variable
     # storage_account_name  = Copy and Paste value from Environment Variable
     # container_name        = Copy and Paste value from Environment Variable
-    key                   = "terraform.tfstate"
+    key                     = "terraform.tfstate"
   }
 }
 
