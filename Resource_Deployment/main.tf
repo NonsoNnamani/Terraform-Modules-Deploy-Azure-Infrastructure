@@ -3,6 +3,15 @@ provider "azurerm" {
   features {}
 }
 
+terraform {
+  backend "azurerm" {
+    # resource_group_name   = Copy and Paste value from Environment Variable
+    # storage_account_name  = Copy and Paste value from Environment Variable
+    # container_name        = Copy and Paste value from Environment Variable
+    key                   = "terraform.tfstate"
+  }
+}
+
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = var.location
@@ -35,17 +44,4 @@ module "container_registry" {
   resource_group_name     = azurerm_resource_group.rg.name
   container_registry_sku  = var.container_registry_sku
   admin_enabled           = var.admin_enabled
-}
-
-module "tfstate_remote_backend" {
-  source = "../TFState_Remote_Backend"
-}
-
-terraform {
-  backend "azurerm" {
-    resource_group_name   = module.tfstate_remote_backend.tfstate_remote_backend_rg_name
-    storage_account_name  = module.tfstate_remote_backend.tfstate_remote_backend_storage_account_name
-    container_name        = module.tfstate_remote_backend.tfstate_remote_backend_storage_container_name
-    key                   = "terraform.tfstate"
-  }
 }
